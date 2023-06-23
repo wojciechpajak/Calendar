@@ -1,25 +1,16 @@
-# README
+# Kalendarz Akademicki
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+![Kalendarz Akademicki]([link_do_obrazka.png](https://rekrutacja.pwr.edu.pl/wp-content/uploads/2023/02/W-4-300x300.png))
 
-Things you may want to cover:
+Kalendarz Akademicki to aplikacja pozwalająca na zarządzanie kalendarzem wydarzeń, kursów oraz ról w kontekście środowiska akademickiego. Aplikacja oferuje funkcje przeglądania kalendarza tygodniowego i miesięcznego, zarządzania wydarzeniami, definiowania oraz zarządzania użytkownikami oraz ich rolami w systemie.
 
-* Ruby version
+## Funkcje
 
-* System dependencies
+- Przeglądanie kalendarza tygodniowego i miesięcznego z wydarzeniami
+- Dodawanie, edytowanie i usuwanie wydarzeń w kalendarzu
+- Definiowanie różnych ról użytkowników (tj. admin, lecturer)
+- Dostęp do kalendarza i funkcji zarządzania rolami tylko dla użytkowników z odpowiednimi uprawnieniami
 
-* Configuration
+## Autorzy
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# Calendar
+- Wojciech Pająk, student Politechniki Wrocławskiej
