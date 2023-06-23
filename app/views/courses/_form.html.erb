@@ -1,0 +1,49 @@
+<%= form_with(model: course) do |form| %>
+  <% if course.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(course.errors.count, "error") %> prohibited this course from being saved:</h2>
+
+      <ul>
+        <% course.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :title, style: "display: block" %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.label :location, style: "display: block" %>
+    <%= form.text_field :location %>
+  </div>
+
+  <div>
+    <%= form.label :lecturer %>
+    <% if current_user.admin? %><br />
+      <%= form.collection_select :lecturer, User.where(role: :lecturer), :username, :username, prompt: "Select lecturer" %>
+    <% else %><br />
+      <%= form.text_field :lecturer, disabled: true, value: current_user.username %>
+    <% end %>
+  </div>
+
+
+
+
+  <div>
+    <%= form.label :start_time, style: "display: block" %>
+    <%= form.datetime_field :start_time %>
+  </div>
+
+  <div>
+    <%= form.label :end_time, style: "display: block" %>
+    <%= form.datetime_field :end_time %>
+  </div>
+
+  <div><br />
+    <%= form.submit %>
+  </div>
+<% end %>

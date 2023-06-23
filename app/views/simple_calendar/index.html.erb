@@ -1,0 +1,37 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-12">
+      <table class="table mb-0">
+        <thead>
+          <tr>
+            <th scope="col">Title</th>
+            <th scope="col">Lecturer</th>
+            <th scope="col">Location</th>
+            <th scope="col">Date</th>
+            <th scope="col">Hour</th>
+            <th scope="col"></th>
+            <th scope="col">Lecturer (ID)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @courses.each do |course| %>
+            <tr>
+              <td><%= link_to course.title, course %></td>
+              <td><%= course.lecturer %></td>
+              <td><%= course.location %></td>
+              <td><%= course.start_time.strftime('%d.%m') %></td>
+              <td><%= course.start_time.strftime('%I:%M') %></td>
+              <td><%= course.end_time.strftime('%I:%M') %></td>
+              <td><%= course.lecturer_index %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 mt-3">
+      <%= button_to "New Event", { :action => "new" }, :method => :get, :class => "btn btn-success" %>
+    </div>
+  </div>
+</div>

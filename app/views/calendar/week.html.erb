@@ -1,0 +1,28 @@
+<div class="container mt-5 text-center">
+    <%= week_calendar(events: @courses) do |date, courses| %>
+        <div class="day">
+            <%= date.day %>
+        </div>
+        <% courses.each do |courses| %>
+            <div class="card-header">
+                <div class="card-title">
+                    <%= link_to courses.title, courses %>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="card-text">
+                    <%= courses.lecturer %>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="card-text">
+                    <%= courses.location%>
+                </div>
+                <div class="card-text">
+                    <%= courses.start_time.strftime('%k:%M - ') %>
+                    <%= courses.end_time.strftime('%k:%M') %>
+                </div>
+            </div>
+        <% end %>
+    <% end %>
+</div>
