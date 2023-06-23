@@ -1,7 +1,5 @@
 # Kalendarz Akademicki
 
-![Kalendarz Akademicki]([https://rekrutacja.pwr.edu.pl/wp-content/uploads/2023/02/W-4-300x300.png])
-
 Kalendarz Akademicki to aplikacja pozwalająca na zarządzanie kalendarzem wydarzeń, kursów oraz ról w kontekście środowiska akademickiego. Aplikacja oferuje funkcje przeglądania kalendarza tygodniowego i miesięcznego, zarządzania wydarzeniami, definiowania oraz zarządzania użytkownikami oraz ich rolami w systemie.
 
 ## Funkcje
